@@ -115,22 +115,19 @@
     display: none;
 }
 
+.menu-items{
+    margin-top: 50px;
+}
+
 .site-header{
     position: absolute;
-    background-color: #eee;
-    min-height: 100vh;
+    background-color: rgb(2, 19, 71);
+    height: 90px;
     top: 0;
     left: 100px;
     transition: all 0.5s ease;
     width: calc(100% - 90px);
     padding: 1rem;
     margin-left: 0;
-
-}
-
-.site-header .container a i .site-name{
-    text-align: center;
-    color: #12171e;
-
-
-}
+    display: block;
+ }
