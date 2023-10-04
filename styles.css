@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100px;
+    background-color: #12171e;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .site-header{
+    left: 200px;
+    width: calc(100% - 200px);
+}
+
+.sidebar.active{
+    width: 200px;
+}
+
+.sidebar #btn{
+    position: absolute;
+    color: white;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn{
+    left: 90%;
+}
+
+.sidebar .top .logo{
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 100px;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+
+.top .logo{
+    margin-right: 100px;
+}
+
+.sidebar ul li{
+    position: relative;
+    list-style: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.5rem auto;
+    line-height: 50px;  
+    margin-left: 0;  
+}
+
+.sidebar ul li a{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover{
+    background-color: white;
+    color: #12171e;
+}
+
+.sidebar ul li i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item{
+    opacity: 0;
+}
+
+.sidebar.active .nav-item{
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 2.0rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+
+.site-header{
+    position: absolute;
+    background-color: #eee;
+    min-height: 100vh;
+    top: 0;
+    left: 100px;
+    transition: all 0.5s ease;
+    width: calc(100% - 90px);
+    padding: 1rem;
+    margin-left: 0;
+
+}
+
+.site-header .container a i .site-name{
+    text-align: center;
+    color: #12171e;
+
+
+}
