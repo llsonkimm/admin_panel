@@ -7,17 +7,21 @@
     position: relative;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 200vh;
     width: 100px;
     background-color: #12171e;
     transition: all 0.5s ease;
 }
 
-.sidebar.active ~ .site-header{
-    left: 200px;
-    width: calc(100% - 200px);
+/* .sidebar.active ~ .site-header{
+    left: 100px;
+    width: calc(100% - 100px);
 }
 
+.site-header ~ .sidebar{
+    left: 0px;
+    width: 100px;
+} */
 .sidebar.active{
     width: 200px;
 }
@@ -124,10 +128,26 @@
     background-color: rgb(2, 19, 71);
     height: 90px;
     top: 0;
-    left: 100px;
     transition: all 0.5s ease;
-    width: calc(100% - 90px);
+    width:calc(100% - 200px);
     padding: 1rem;
-    margin-left: 0;
     display: block;
+    left: 200px;
  }
+
+ .site-header ul li {
+    margin-right: 50px;
+ }
+
+ .site-header .main-section{
+    margin-top: 40px;
+ }
+
+ td, th {
+    text-align: center;
+  }
+
+  /* Center the table cells within the table row */
+  tr {
+    text-align: center;
+  }
